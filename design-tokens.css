@@ -1,0 +1,69 @@
+body {
+  display: flex;
+  justify-content: space-around;
+  padding: 2em;
+  font: 600 16px/1.5 "Source Sans Pro", Tahoma, "Trebuchet MS", sans-serif;
+}
+
+.button {
+  border-radius: 4px;
+  box-shadow: 0 0 0.75em 0 rgba(100, 116, 128, 0.16), 0 0.375em 1em -0.5em rgba(100, 116, 128, 0.8);
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  line-height: 1.5em;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.button:hover {
+  box-shadow: 0 0 0.875em 0 rgba(100, 116, 128, 0.16), 0 0.5em 1.125em -0.5em rgba(100, 116, 128, 0.8);
+  transform: translateY(calc(-3px + -1%));
+}
+.button:focus {
+  box-shadow: 0 0 0.875em 0 rgba(100, 116, 128, 0.16), 0 0.5em 1.125em -0.5em rgba(100, 116, 128, 0.8);
+  transform: translateY(calc(-3px + -1%));
+}
+.button:active {
+  box-shadow: 0 0 0.75em 0 rgba(100, 116, 128, 0.16), 0 0.375em 1em -0.5em rgba(100, 116, 128, 0.8);
+  transform: translateY(0);
+}
+
+.button--medium {
+  padding: 0.5em 1em;
+  font-size: 1em;
+}
+
+.button--blue {
+  background: #0b5fff;
+  color: #fff;
+}
+.button--blue:hover, .button--blue:focus {
+  background: #0053f0;
+}
+.button--blue:active {
+  background: #004AD7;
+}
+
+.button--white {
+  background: #fff;
+  color: #0b5fff;
+}
+.button--white:hover, .button--white:focus {
+  color: #0053f0;
+}
+.button--white:active {
+  color: #004AD7;
+}
+
+.button--icon {
+  padding: 0.5em 2.25em 0.5em 1em;
+  position: relative;
+}
+.button--icon svg {
+  position: absolute;
+  right: 0.5em;
+  top: 0.5em;
+}
+
+/*# sourceMappingURL=design-tokens.css.map */
