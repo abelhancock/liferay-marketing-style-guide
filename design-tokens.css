@@ -5,6 +5,7 @@ body {
   font: 600 16px/1.5 "Source Sans Pro", Tahoma, "Trebuchet MS", sans-serif;
 }
 
+/* BUTTONS */
 .button {
   border-radius: 4px;
   box-shadow: 0 0 0.75em 0 rgba(100, 116, 128, 0.16), 0 0.375em 1em -0.5em rgba(100, 116, 128, 0.8);
@@ -64,6 +65,27 @@ body {
   position: absolute;
   right: 0.5em;
   top: 0.5em;
+}
+
+/* ELEVATION */
+.elevation--1 {
+  box-shadow: 0 0 0.625em 0 RGBA(76, 76, 76, 0.16);
+  box-shadow: 0 0 0.875em -0.5em RGBA(76, 76, 76, 0.8);
+}
+
+.elevation--2 {
+  box-shadow: 0 0 0.75em 0 RGBA(76, 76, 76, 0.16);
+  box-shadow: 0 0.375em 1em -0.5em RGBA(76, 76, 76, 0.8);
+}
+
+.elevation--3 {
+  box-shadow: 0 0 0.875em 0 RGBA(76, 76, 76, 0.16);
+  box-shadow: 0 0.5em 1.125em -0.5em RGBA(76, 76, 76, 0.8);
+}
+
+.elevation--4 {
+  box-shadow: 0 0 1em 0 RGBA(76, 76, 76, 0.16);
+  box-shadow: 0 1.125em 1.25em -0.5em RGBA(76, 76, 76, 0.8);
 }
 
 /*# sourceMappingURL=design-tokens.css.map */
