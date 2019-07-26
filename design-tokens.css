@@ -9,9 +9,11 @@ body {
 .button {
   border-radius: 4px;
   box-shadow: 0 0 0.75em 0 rgba(100, 116, 128, 0.16), 0 0.375em 1em -0.5em rgba(100, 116, 128, 0.8);
+  box-sizing: content-box;
   cursor: pointer;
   display: inline-block;
   font-weight: 600;
+  height: 24px;
   line-height: 24px;
   text-align: center;
   text-decoration: none;
