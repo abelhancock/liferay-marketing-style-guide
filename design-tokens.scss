@@ -2,17 +2,17 @@ body {
 	display: flex;
 	justify-content: space-around;
 	padding: 2em;
-    font: 600 16px/1.5 'Source Sans Pro',Tahoma,'Trebuchet MS',sans-serif;
+	font: 400 18px/28px 'Source Sans Pro',Tahoma,'Trebuchet MS',sans-serif;
 }
 
-/* BUTTONS */
+/* ---------- BUTTONS --------- */
 .button {
   border-radius: 4px;
   box-shadow: 0 0 0.75em 0 rgba(100,116,128,.16), 0 0.375em 1em -0.5em rgba(100,116,128,.8);
   cursor: pointer;
   display: inline-block;
   font-weight: 600;
-  line-height: 1.5em;
+  line-height: 24px;
   text-align: center;
   text-decoration: none;
   transition: all 0.2s;
@@ -30,9 +30,15 @@ body {
   }
 }
 
+.button--small {
+  padding: 4px 12px;
+  font-size: 16px;
+}
 .button--medium {
-  padding: 0.5em 1em;
-  font-size: 1em;
+  padding: 8px 16px;
+}
+.button--large {
+  padding: 12px 20px;
 }
 .button--blue {
   background: #0b5fff;
@@ -64,41 +70,36 @@ body {
   }
 }
 
-/* ELEVATION */
-.elevation--1 {
-  @extend %elevation--1;
-}
-.elevation--2 {
-  @extend %elevation--2;
-}
-.elevation--3 {
-  @extend %elevation--3;
-}
-.elevation--4 {
-  @extend %elevation--4;
+/* ---------- ELEVATIONS --------- */
+$intensityMap: (
+	"lighter": 0.25,
+	"light": 0.5,
+	"default": 1,
+	"dark": 2,
+	"darker": 4,
+);
+
+@mixin elevation($n, $intensity: default) {
+	box-shadow:
+		0px ($n - 1)*0.3 + 0.5px $n*0.35 + 3px ($n - 1) * -0.33px rgba(0, 0, 0, 0.14 * map-get($intensityMap, $intensity)),
+		0px $n*1px $n*1.5px ($n - 1) * 0.15px rgba(0, 0, 0, 0.03 + ($n * 0.002 * map-get($intensityMap, $intensity)) ),
+		0px $n*0.3 + 2px $n*2px $n * 0.4 - 1px rgba(0, 0, 0, 0.06 * map-get($intensityMap, $intensity));
 }
 
-%elevation--1 {
-  box-shadow: 0 0 0.625em 0 
-RGBA(76, 76, 76, 0.16);
-  box-shadow: 0 0 0.875em -0.5em
-RGBA(76, 76, 76, 0.8);
-}
-%elevation--2 {
-  box-shadow: 0 0 0.75em 0 
-RGBA(76, 76, 76, 0.16);
-  box-shadow: 0 0.375em 1em -0.5em
-RGBA(76, 76, 76, 0.8);
-}
-%elevation--3 {
-  box-shadow: 0 0 0.875em 0 
-RGBA(76, 76, 76, 0.16);
-  box-shadow: 0 0.5em 1.125em -0.5em
-RGBA(76, 76, 76, 0.8);
-}
-%elevation--4 {
-  box-shadow: 0 0 1em 0
-RGBA(76, 76, 76, 0.16);
-  box-shadow: 0 1.125em 1.25em -0.5em
-RGBA(76, 76, 76, 0.8);
+$elevationMap: (
+	1: 1,
+	2: 2,
+	3: 3,
+	4: 4,
+	5: 6,
+	6: 8,
+	7: 11,
+	8: 15,
+	9: 24,
+);
+
+@for $i from 1 through 9 {
+  .elevation--#{$i} {
+    @include elevation(map-get($elevationMap, $i));
+  }
 }
