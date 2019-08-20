@@ -1,12 +1,9 @@
 :root {
+  /* ---------- TYPOGRAPHY --------- */
+  --fontFamily__sans: $fontFamily__sans;
+  --fontFamily__serif: $fontFamily__serif;
+  --fontFamily__mono: $fontFamily__mono;
   /* ---------- COLORS --------- */
-  /* ------ SCSS ------ */
-  /* --- primary --- */
-  /* --- neutral --- */
-  /* --- accent --- */
-  /* --- aciton --- */
-  /* --- function --- */
-  /* ------ CSS ------ */
   /* --- primary --- */
   --color__primary--brand-blue: #0b63ce;
   --color__primary--dark-blue: #134194;
@@ -55,8 +52,6 @@
   --color__function--info--background: #eef2fa;
   /* ---------- ELEVATIONS --------- */
   /* ---------- BREAKPOINTS --------- */
-  /* ------ SCSS ------ */
-  /* ------ CSS ------ */
   --breakpoint__forPhoneOnly: 599px;
   --breakpoint__forTabletPortraitUp: 600px;
   --breakpoint__forTabletLandscapeUp: 900px;

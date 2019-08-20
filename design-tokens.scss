@@ -1,11 +1,25 @@
 :root {
+  /* ---------- TYPOGRAPHY --------- */
+  $fontFamily__sans: 'Source Sans Pro', Tahoma, 'Trebuchet MS', sans-serif;
+  $fontFamily__serif: 'Source Serif Pro', Georgia, Cambria, 'Times New Roman', Times,serif;
+  $fontFamily__mono: 'Source Code Pro', Menlo, monospace;
+  --fontFamily__sans: $fontFamily__sans;
+  --fontFamily__serif: $fontFamily__serif;
+  --fontFamily__mono: $fontFamily__mono;
+
+
+  $font__paragraph: 400 18px/28px $fontFamily__sans;
+  $font__heading--f1: 600 32px/36px $fontFamily__sans;
+
   /* ---------- COLORS --------- */
 
-  /* ------ SCSS ------ */
   /* --- primary --- */
   $color__primary--brand-blue: #0b63ce;
   $color__primary--dark-blue: #134194;
   $color__primary--black: #09101d;
+  --color__primary--brand-blue: #{$color__primary--brand-blue};
+  --color__primary--dark-blue: #{$color__primary--dark-blue};
+  --color__primary--black: #{$color__primary--black};
 
   /* --- neutral --- */
   $color__neutral--1: #2c3a4b;
@@ -17,6 +31,15 @@
   $color__neutral--7: #dadee3;
   $color__neutral--8: #ebeef2;
   $color__neutral--9: #f4f6f9;
+  --color__neutral--1: #{$color__neutral--1};
+  --color__neutral--2: #{$color__neutral--2};
+  --color__neutral--3: #{$color__neutral--3};
+  --color__neutral--4: #{$color__neutral--4};
+  --color__neutral--5: #{$color__neutral--5};
+  --color__neutral--6: #{$color__neutral--6};
+  --color__neutral--7: #{$color__neutral--7};
+  --color__neutral--8: #{$color__neutral--8};
+  --color__neutral--9: #{$color__neutral--9};
 
   /* --- accent --- */
   $color__accent--0: #072252;
@@ -29,54 +52,6 @@
   $color__accent--7: #503690;
   $color__accent--8: #fdcc4a;
   $color__accent--9: #47c6f5;
-
-  /* --- aciton --- */
-  $color__action--default: #0b5fff;
-  $color__action--default--hover: darken($color__action--default, 5%);
-  $color__action--default--active: darken($color__action--default, 10%);
-  $color__action--secondary: $color__accent--6;
-  $color__action--secondary--hover: darken($color__action--secondary, 5%);
-  $color__action--secondary--active: darken($color__action--secondary, 10%);
-  $color__action--visited: #5e38ba;
-
-  /* --- function --- */
-  $color__function--error: #da1414;
-  $color__function--error--border: lighten($color__function--error, 28%);
-  $color__function--error--background: lighten($color__function--error, 50%);
-  $color__function--warning: #b95000;
-  $color__function--warning--border: lighten($color__function--warning, 25%);
-  $color__function--warning--background: lighten(
-    $color__function--warning,
-    60%
-  );
-  $color__function--success: #287d3c;
-  $color__function--success--border: lighten($color__function--success, 25%);
-  $color__function--success--background: lighten(
-    $color__function--success,
-    63%
-  );
-  $color__function--info: #2e5aac;
-  $color__function--info--border: lighten($color__function--info, 28%);
-  $color__function--info--background: lighten($color__function--info, 53%);
-
-  /* ------ CSS ------ */
-  /* --- primary --- */
-  --color__primary--brand-blue: #{$color__primary--brand-blue};
-  --color__primary--dark-blue: #{$color__primary--dark-blue};
-  --color__primary--black: #{$color__primary--black};
-
-  /* --- neutral --- */
-  --color__neutral--1: #{$color__neutral--1};
-  --color__neutral--2: #{$color__neutral--2};
-  --color__neutral--3: #{$color__neutral--3};
-  --color__neutral--4: #{$color__neutral--4};
-  --color__neutral--5: #{$color__neutral--5};
-  --color__neutral--6: #{$color__neutral--6};
-  --color__neutral--7: #{$color__neutral--7};
-  --color__neutral--8: #{$color__neutral--8};
-  --color__neutral--9: #{$color__neutral--9};
-
-  /* --- accent --- */
   --color__accent--0: #{$color__accent--0};
   --color__accent--1: #{$color__accent--1};
   --color__accent--2: #{$color__accent--2};
@@ -89,6 +64,13 @@
   --color__accent--9: #{$color__accent--9};
 
   /* --- aciton --- */
+  $color__action--default: #0b5fff;
+  $color__action--default--hover: darken($color__action--default, 5%);
+  $color__action--default--active: darken($color__action--default, 10%);
+  $color__action--secondary: $color__accent--6;
+  $color__action--secondary--hover: darken($color__action--secondary, 5%);
+  $color__action--secondary--active: darken($color__action--secondary, 10%);
+  $color__action--visited: #5e38ba;
   --color__action--default: #{$color__action--default};
   --color__action--default--hover: #{$color__action--default--hover};
   --color__action--default--active: #{$color__action--default--active};
@@ -98,6 +80,18 @@
   --color__action--visited: #{$color__action--visited};
 
   /* --- function --- */
+  $color__function--error: #da1414;
+  $color__function--error--border: lighten($color__function--error, 28%);
+  $color__function--error--background: lighten($color__function--error, 50%);
+  $color__function--warning: #b95000;
+  $color__function--warning--border: lighten($color__function--warning, 25%);
+  $color__function--warning--background: lighten($color__function--warning, 60%);
+  $color__function--success: #287d3c;
+  $color__function--success--border: lighten($color__function--success, 25%);
+  $color__function--success--background: lighten($color__function--success, 63%);
+  $color__function--info: #2e5aac;
+  $color__function--info--border: lighten($color__function--info, 28%);
+  $color__function--info--background: lighten($color__function--info, 53%);
   --color__function--error: #{$color__function--error};
   --color__function--error--border: #{$color__function--error--border};
   --color__function--error--background: #{$color__function--error--background};
@@ -148,13 +142,11 @@
   }
 
   /* ---------- BREAKPOINTS --------- */
-  /* ------ SCSS ------ */
   $breakpoint__forPhoneOnly: 599px;
   $breakpoint__forTabletPortraitUp: 600px;
   $breakpoint__forTabletLandscapeUp: 900px;
   $breakpoint__forDesktopUp: 1200px;
   $breakpoint__forBigDesktopUp: 1800px;
-  /* ------ CSS ------ */
   --breakpoint__forPhoneOnly: #{$breakpoint__forPhoneOnly};
   --breakpoint__forTabletPortraitUp: #{$breakpoint__forTabletPortraitUp};
   --breakpoint__forTabletLandscapeUp: #{$breakpoint__forTabletLandscapeUp};
