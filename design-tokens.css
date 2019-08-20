@@ -1,12 +1,12 @@
-/* ---------- COLORS --------- */
-/* ------ SCSS ------ */
-/* --- primary --- */
-/* --- neutral --- */
-/* --- accent --- */
-/* --- aciton --- */
-/* --- function --- */
-/* ------ CSS ------ */
 :root {
+  /* ---------- COLORS --------- */
+  /* ------ SCSS ------ */
+  /* --- primary --- */
+  /* --- neutral --- */
+  /* --- accent --- */
+  /* --- aciton --- */
+  /* --- function --- */
+  /* ------ CSS ------ */
   /* --- primary --- */
   --color__primary--brand-blue: #0b63ce;
   --color__primary--dark-blue: #134194;
@@ -33,62 +33,61 @@
   --color__accent--8: #fdcc4a;
   --color__accent--9: #47c6f5;
   /* --- aciton --- */
-  --color__action--default: #0B5FFF;
+  --color__action--default: #0b5fff;
   --color__action--default--hover: #0053f1;
   --color__action--default--active: #004ad7;
   --color__action--secondary: #19ab4f;
   --color__action--secondary--hover: #169545;
   --color__action--secondary--active: #127f3a;
-  --color__action--visited: #5E38BA;
+  --color__action--visited: #5e38ba;
   /* --- function --- */
-  --color__function--error: #DA1414;
+  --color__function--error: #da1414;
   --color__function--error--border: #f48989;
   --color__function--error--background: #feefef;
-  --color__function--warning: #B95000;
+  --color__function--warning: #b95000;
   --color__function--warning--border: #ff8f3a;
   --color__function--warning--background: #fff4ec;
-  --color__function--success: #287D3C;
+  --color__function--success: #287d3c;
   --color__function--success--border: #5aca75;
   --color__function--success--background: #edf9f0;
-  --color__function--info: #2E5AAC;
+  --color__function--info: #2e5aac;
   --color__function--info--border: #89a7e0;
   --color__function--info--background: #eef2fa;
+  /* ---------- ELEVATIONS --------- */
+  /* ---------- BREAKPOINTS --------- */
+  /* ------ SCSS ------ */
+  /* ------ CSS ------ */
+  --breakpoint__forPhoneOnly: 599px;
+  --breakpoint__forTabletPortraitUp: 600px;
+  --breakpoint__forTabletLandscapeUp: 900px;
+  --breakpoint__forDesktopUp: 1200px;
+  --breakpoint__forBigDesktopUp: 1800px;
 }
-
-/* ---------- ELEVATIONS --------- */
-.elevation--1 {
+:root .elevation--1 {
   box-shadow: 0px 0.5px 3.35px 0px rgba(0, 0, 0, 0.14), 0px 1px 1.5px 0px rgba(0, 0, 0, 0.032), 0px 2.3px 2px -0.6px rgba(0, 0, 0, 0.06);
 }
-
-.elevation--2 {
+:root .elevation--2 {
   box-shadow: 0px 0.8px 3.7px -0.33px rgba(0, 0, 0, 0.14), 0px 2px 3px 0.15px rgba(0, 0, 0, 0.034), 0px 2.6px 4px -0.2px rgba(0, 0, 0, 0.06);
 }
-
-.elevation--3 {
+:root .elevation--3 {
   box-shadow: 0px 1.1px 4.05px -0.66px rgba(0, 0, 0, 0.14), 0px 3px 4.5px 0.3px rgba(0, 0, 0, 0.036), 0px 2.9px 6px 0.2px rgba(0, 0, 0, 0.06);
 }
-
-.elevation--4 {
+:root .elevation--4 {
   box-shadow: 0px 1.4px 4.4px -0.99px rgba(0, 0, 0, 0.14), 0px 4px 6px 0.45px rgba(0, 0, 0, 0.038), 0px 3.2px 8px 0.6px rgba(0, 0, 0, 0.06);
 }
-
-.elevation--5 {
+:root .elevation--5 {
   box-shadow: 0px 2px 5.1px -1.65px rgba(0, 0, 0, 0.14), 0px 6px 9px 0.75px rgba(0, 0, 0, 0.042), 0px 3.8px 12px 1.4px rgba(0, 0, 0, 0.06);
 }
-
-.elevation--6 {
+:root .elevation--6 {
   box-shadow: 0px 2.6px 5.8px -2.31px rgba(0, 0, 0, 0.14), 0px 8px 12px 1.05px rgba(0, 0, 0, 0.046), 0px 4.4px 16px 2.2px rgba(0, 0, 0, 0.06);
 }
-
-.elevation--7 {
+:root .elevation--7 {
   box-shadow: 0px 3.5px 6.85px -3.3px rgba(0, 0, 0, 0.14), 0px 11px 16.5px 1.5px rgba(0, 0, 0, 0.052), 0px 5.3px 22px 3.4px rgba(0, 0, 0, 0.06);
 }
-
-.elevation--8 {
+:root .elevation--8 {
   box-shadow: 0px 4.7px 8.25px -4.62px rgba(0, 0, 0, 0.14), 0px 15px 22.5px 2.1px rgba(0, 0, 0, 0.06), 0px 6.5px 30px 5px rgba(0, 0, 0, 0.06);
 }
-
-.elevation--9 {
+:root .elevation--9 {
   box-shadow: 0px 7.4px 11.4px -7.59px rgba(0, 0, 0, 0.14), 0px 24px 36px 3.45px rgba(0, 0, 0, 0.078), 0px 9.2px 48px 8.6px rgba(0, 0, 0, 0.06);
 }
 
