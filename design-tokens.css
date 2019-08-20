@@ -1,80 +1,58 @@
-body {
-  display: flex;
-  justify-content: space-around;
-  padding: 2em;
-  font: 400 18px/28px "Source Sans Pro", Tahoma, "Trebuchet MS", sans-serif;
-}
-
-/* ---------- BUTTONS --------- */
-.button {
-  border-radius: 4px;
-  box-shadow: 0 0 0.75em 0 rgba(100, 116, 128, 0.16), 0 0.375em 1em -0.5em rgba(100, 116, 128, 0.8);
-  box-sizing: content-box;
-  cursor: pointer;
-  display: inline-block;
-  font-weight: 600;
-  height: 24px;
-  line-height: 24px;
-  text-align: center;
-  text-decoration: none;
-  transition: all 0.2s;
-}
-.button:hover {
-  box-shadow: 0 0 0.875em 0 rgba(100, 116, 128, 0.16), 0 0.5em 1.125em -0.5em rgba(100, 116, 128, 0.8);
-  transform: translateY(calc(-3px + -1%));
-}
-.button:focus {
-  box-shadow: 0 0 0.875em 0 rgba(100, 116, 128, 0.16), 0 0.5em 1.125em -0.5em rgba(100, 116, 128, 0.8);
-  transform: translateY(calc(-3px + -1%));
-}
-.button:active {
-  box-shadow: 0 0 0.75em 0 rgba(100, 116, 128, 0.16), 0 0.375em 1em -0.5em rgba(100, 116, 128, 0.8);
-  transform: translateY(0);
-}
-
-.button--small {
-  padding: 4px 12px;
-  font-size: 16px;
-}
-
-.button--medium {
-  padding: 8px 16px;
-}
-
-.button--large {
-  padding: 12px 20px;
-}
-
-.button--blue {
-  background: #0b5fff;
-  color: #fff;
-}
-.button--blue:hover, .button--blue:focus {
-  background: #0053f0;
-}
-.button--blue:active {
-  background: #004AD7;
-}
-
-.button--white {
-  background: #fff;
-  color: #0b5fff;
-}
-.button--white:hover, .button--white:focus {
-  color: #0053f0;
-}
-.button--white:active {
-  color: #004AD7;
-}
-
-.button--icon {
-  padding: 0.5em 2.25em 0.5em 1em;
-  position: relative;
-}
-.button--icon svg {
-  position: absolute;
-  right: 0.5em;
-  top: 0.5em;
+/* ---------- COLORS --------- */
+/* ------ SCSS ------ */
+/* --- primary --- */
+/* --- neutral --- */
+/* --- accent --- */
+/* --- aciton --- */
+/* --- function --- */
+/* ------ CSS ------ */
+:root {
+  /* --- primary --- */
+  --color__primary--brand-blue: #0b63ce;
+  --color__primary--dark-blue: #134194;
+  --color__primary--black: #09101d;
+  /* --- neutral --- */
+  --color__neutral--1: #2c3a4b;
+  --color__neutral--2: #394452;
+  --color__neutral--3: #545d69;
+  --color__neutral--4: #6d7580;
+  --color__neutral--5: #858c94;
+  --color__neutral--6: #a5abb3;
+  --color__neutral--7: #dadee3;
+  --color__neutral--8: #ebeef2;
+  --color__neutral--9: #f4f6f9;
+  /* --- accent --- */
+  --color__accent--0: #072252;
+  --color__accent--1: #1aa0e8;
+  --color__accent--2: #e06e31;
+  --color__accent--3: #d33a2f;
+  --color__accent--4: #42bfc2;
+  --color__accent--5: #e55e75;
+  --color__accent--6: #19ab4f;
+  --color__accent--7: #503690;
+  --color__accent--8: #fdcc4a;
+  --color__accent--9: #47c6f5;
+  /* --- aciton --- */
+  --color__action--default: #0B5FFF;
+  --color__action--default--hover: #0053f1;
+  --color__action--default--active: #004ad7;
+  --color__action--secondary: #19ab4f;
+  --color__action--secondary--hover: #169545;
+  --color__action--secondary--active: #127f3a;
+  --color__action--visited: #5E38BA;
+  /* --- function --- */
+  --color__function--error: #DA1414;
+  --color__function--error--border: #f48989;
+  --color__function--error--background: #feefef;
+  --color__function--warning: #B95000;
+  --color__function--warning--border: #ff8f3a;
+  --color__function--warning--background: #fff4ec;
+  --color__function--success: #287D3C;
+  --color__function--success--border: #5aca75;
+  --color__function--success--background: #edf9f0;
+  --color__function--info: #2E5AAC;
+  --color__function--info--border: #89a7e0;
+  --color__function--info--background: #eef2fa;
 }
 
 /* ---------- ELEVATIONS --------- */

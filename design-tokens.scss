@@ -1,75 +1,110 @@
-body {
-	display: flex;
-	justify-content: space-around;
-	padding: 2em;
-	font: 400 18px/28px 'Source Sans Pro',Tahoma,'Trebuchet MS',sans-serif;
-}
+/* ---------- COLORS --------- */
 
-/* ---------- BUTTONS --------- */
-.button {
-  border-radius: 4px;
-  box-shadow: 0 0 0.75em 0 rgba(100,116,128,.16), 0 0.375em 1em -0.5em rgba(100,116,128,.8);
-  box-sizing: content-box;
-  cursor: pointer;
-  display: inline-block;
-  font-weight: 600;
-  height: 24px;
-  line-height: 24px;
-  text-align: center;
-  text-decoration: none;
-  transition: all 0.2s;
-  &:hover {
-    box-shadow: 0 0 0.875em 0 rgba(100,116,128,.16), 0 0.5em 1.125em -0.5em rgba(100,116,128,.8);
-    transform: translateY(calc(-3px + -1%));
-  }
-  &:focus {
-    box-shadow: 0 0 0.875em 0 rgba(100,116,128,.16), 0 0.5em 1.125em -0.5em rgba(100,116,128,.8);
-    transform: translateY(calc(-3px + -1%));
-  }
-  &:active {
-    box-shadow: 0 0 0.75em 0 rgba(100,116,128,.16), 0 0.375em 1em -0.5em rgba(100,116,128,.8);
-    transform: translateY(0);
-  }
-}
+/* ------ SCSS ------ */
+/* --- primary --- */
+$color__primary--brand-blue: #0b63ce;
+$color__primary--dark-blue: #134194;
+$color__primary--black: #09101d;
 
-.button--small {
-  padding: 4px 12px;
-  font-size: 16px;
-}
-.button--medium {
-  padding: 8px 16px;
-}
-.button--large {
-  padding: 12px 20px;
-}
-.button--blue {
-  background: #0b5fff;
-  color: #fff;
-  &:hover, &:focus {
-    background: #0053f0;
-  }
-  &:active {
-    background: #004AD7;
-  }
-}
-.button--white {
-  background: #fff;
-  color: #0b5fff;
-  &:hover, &:focus {
-    color: #0053f0;
-  }
-  &:active {
-    color: #004AD7;
-  }
-}
-.button--icon {
-  padding: 0.5em 2.25em 0.5em 1em;
-  position: relative;
-  svg {
-    position: absolute;
-    right: 0.5em;
-    top: 0.5em;
-  }
+/* --- neutral --- */
+$color__neutral--1: #2c3a4b;
+$color__neutral--2: #394452;
+$color__neutral--3: #545d69;
+$color__neutral--4: #6d7580;
+$color__neutral--5: #858c94;
+$color__neutral--6: #a5abb3;
+$color__neutral--7: #dadee3;
+$color__neutral--8: #ebeef2;
+$color__neutral--9: #f4f6f9;
+
+/* --- accent --- */
+$color__accent--0: #072252;
+$color__accent--1: #1aa0e8;
+$color__accent--2: #e06e31;
+$color__accent--3: #d33a2f;
+$color__accent--4: #42bfc2;
+$color__accent--5: #e55e75;
+$color__accent--6: #19ab4f;
+$color__accent--7: #503690;
+$color__accent--8: #fdcc4a;
+$color__accent--9: #47c6f5;
+
+/* --- aciton --- */
+$color__action--default: #0B5FFF;
+$color__action--default--hover: darken($color__action--default, 5%);
+$color__action--default--active: darken($color__action--default, 10%);
+$color__action--secondary: $color__accent--6;
+$color__action--secondary--hover: darken($color__action--secondary, 5%);
+$color__action--secondary--active: darken($color__action--secondary, 10%);
+$color__action--visited: #5E38BA;
+
+/* --- function --- */
+$color__function--error: #DA1414;
+$color__function--error--border: lighten($color__function--error, 28%);
+$color__function--error--background: lighten($color__function--error, 50%);
+$color__function--warning: #B95000;
+$color__function--warning--border: lighten($color__function--warning, 25%);
+$color__function--warning--background: lighten($color__function--warning, 60%);
+$color__function--success: #287D3C;
+$color__function--success--border: lighten($color__function--success, 25%);
+$color__function--success--background: lighten($color__function--success, 63%);
+$color__function--info: #2E5AAC;
+$color__function--info--border: lighten($color__function--info, 28%);
+$color__function--info--background: lighten($color__function--info, 53%);
+
+
+/* ------ CSS ------ */
+:root {
+  /* --- primary --- */
+  --color__primary--brand-blue: #{$color__primary--brand-blue};
+  --color__primary--dark-blue: #{$color__primary--dark-blue};
+  --color__primary--black: #{$color__primary--black};
+
+  /* --- neutral --- */
+  --color__neutral--1: #{$color__neutral--1};
+  --color__neutral--2: #{$color__neutral--2};
+  --color__neutral--3: #{$color__neutral--3};
+  --color__neutral--4: #{$color__neutral--4};
+  --color__neutral--5: #{$color__neutral--5};
+  --color__neutral--6: #{$color__neutral--6};
+  --color__neutral--7: #{$color__neutral--7};
+  --color__neutral--8: #{$color__neutral--8};
+  --color__neutral--9: #{$color__neutral--9};
+
+  /* --- accent --- */
+  --color__accent--0: #{$color__accent--0};
+  --color__accent--1: #{$color__accent--1};
+  --color__accent--2: #{$color__accent--2};
+  --color__accent--3: #{$color__accent--3};
+  --color__accent--4: #{$color__accent--4};
+  --color__accent--5: #{$color__accent--5};
+  --color__accent--6: #{$color__accent--6};
+  --color__accent--7: #{$color__accent--7};
+  --color__accent--8: #{$color__accent--8};
+  --color__accent--9: #{$color__accent--9};
+
+  /* --- aciton --- */
+  --color__action--default: #{$color__action--default};
+  --color__action--default--hover: #{$color__action--default--hover};
+  --color__action--default--active: #{$color__action--default--active};
+  --color__action--secondary: #{$color__action--secondary};
+  --color__action--secondary--hover: #{$color__action--secondary--hover};
+  --color__action--secondary--active: #{$color__action--secondary--active};
+  --color__action--visited: #{$color__action--visited};
+
+  /* --- function --- */
+  --color__function--error: #{$color__function--error};
+  --color__function--error--border: #{$color__function--error--border};
+  --color__function--error--background: #{$color__function--error--background};
+  --color__function--warning: #{$color__function--warning};
+  --color__function--warning--border: #{$color__function--warning--border};
+  --color__function--warning--background: #{$color__function--warning--background};
+  --color__function--success: #{$color__function--success};
+  --color__function--success--border: #{$color__function--success--border};
+  --color__function--success--background: #{$color__function--success--background};
+  --color__function--info: #{$color__function--info};
+  --color__function--info--border: #{$color__function--info--border};
+  --color__function--info--background: #{$color__function--info--background};
 }
 
 /* ---------- ELEVATIONS --------- */
