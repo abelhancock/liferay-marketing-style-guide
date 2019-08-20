@@ -1,0 +1,73 @@
+body {
+	display: flex;
+	justify-content: space-around;
+	padding: 2em;
+	font: 400 18px/28px 'Source Sans Pro',Tahoma,'Trebuchet MS',sans-serif;
+}
+
+/* ---------- BUTTONS --------- */
+.button {
+  border-radius: 4px;
+  box-shadow: 0 0 0.75em 0 rgba(100,116,128,.16), 0 0.375em 1em -0.5em rgba(100,116,128,.8);
+  box-sizing: content-box;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.2s;
+  &:hover {
+    box-shadow: 0 0 0.875em 0 rgba(100,116,128,.16), 0 0.5em 1.125em -0.5em rgba(100,116,128,.8);
+    transform: translateY(calc(-3px + -1%));
+  }
+  &:focus {
+    box-shadow: 0 0 0.875em 0 rgba(100,116,128,.16), 0 0.5em 1.125em -0.5em rgba(100,116,128,.8);
+    transform: translateY(calc(-3px + -1%));
+  }
+  &:active {
+    box-shadow: 0 0 0.75em 0 rgba(100,116,128,.16), 0 0.375em 1em -0.5em rgba(100,116,128,.8);
+    transform: translateY(0);
+  }
+}
+
+.button--small {
+  padding: 4px 12px;
+  font-size: 16px;
+}
+.button--medium {
+  padding: 8px 16px;
+}
+.button--large {
+  padding: 12px 20px;
+}
+.button--blue {
+  background: #0b5fff;
+  color: #fff;
+  &:hover, &:focus {
+    background: #0053f0;
+  }
+  &:active {
+    background: #004AD7;
+  }
+}
+.button--white {
+  background: #fff;
+  color: #0b5fff;
+  &:hover, &:focus {
+    color: #0053f0;
+  }
+  &:active {
+    color: #004AD7;
+  }
+}
+.button--icon {
+  padding: 0.5em 2.25em 0.5em 1em;
+  position: relative;
+  svg {
+    position: absolute;
+    right: 0.5em;
+    top: 0.5em;
+  }
+}
