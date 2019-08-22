@@ -1,3 +1,5 @@
+@import "design-tokens.scss";
+
 body {
 	display: flex;
 	justify-content: space-around;
@@ -70,4 +72,33 @@ body {
     right: 0.5em;
     top: 0.5em;
   }
+}
+
+/* ---------- ELEVATIONS --------- */
+.elevation--1 {
+  box-shadow: $elevation--1;
+}
+.elevation--2 {
+  box-shadow: $elevation--2;
+}
+.elevation--3 {
+  box-shadow: $elevation--3;
+}
+.elevation--4 {
+  box-shadow: $elevation--4;
+}
+.elevation--5 {
+  box-shadow: $elevation--5;
+}
+.elevation--6 {
+  box-shadow: $elevation--6;
+}
+.elevation--7 {
+  box-shadow: $elevation--7;
+}
+.elevation--8 {
+  box-shadow: $elevation--8;
+}
+.elevation--9 {
+  box-shadow: $elevation--9;
 }
