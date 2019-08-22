@@ -1,76 +1,79 @@
 @import "design-tokens.scss";
 
+html {
+  font-size: 16px;
+}
 body {
 	display: flex;
 	justify-content: space-around;
-	padding: 2em;
-	font: 400 18px/28px 'Source Sans Pro',Tahoma,'Trebuchet MS',sans-serif;
+	padding: $size--2;
+	font: $font__paragraph;
 }
 
 /* ---------- BUTTONS --------- */
 .button {
-  border-radius: 4px;
-  box-shadow: 0 0 0.75em 0 rgba(100,116,128,.16), 0 0.375em 1em -0.5em rgba(100,116,128,.8);
+  border-radius: $size--0_25;
+  box-shadow: $elevation--3;
   box-sizing: content-box;
   cursor: pointer;
   display: inline-block;
   font-weight: 600;
-  height: 24px;
-  line-height: 24px;
+  height: $size--1_5;
+  line-height: $size--1_5;
   text-align: center;
   text-decoration: none;
   transition: all 0.2s;
   &:hover {
-    box-shadow: 0 0 0.875em 0 rgba(100,116,128,.16), 0 0.5em 1.125em -0.5em rgba(100,116,128,.8);
+    box-shadow: $elevation--6;
     transform: translateY(calc(-3px + -1%));
   }
   &:focus {
-    box-shadow: 0 0 0.875em 0 rgba(100,116,128,.16), 0 0.5em 1.125em -0.5em rgba(100,116,128,.8);
+    box-shadow: $elevation--6;
     transform: translateY(calc(-3px + -1%));
   }
   &:active {
-    box-shadow: 0 0 0.75em 0 rgba(100,116,128,.16), 0 0.375em 1em -0.5em rgba(100,116,128,.8);
+    box-shadow: $elevation--3;
     transform: translateY(0);
   }
 }
 
 .button--small {
-  padding: 4px 12px;
-  font-size: 16px;
+  padding: $size--0_25 $size--0_75;
+  font-size: $fontSize__paragraph--small;
 }
 .button--medium {
-  padding: 8px 16px;
+  padding: $size--0_5 $size--1;
 }
 .button--large {
-  padding: 12px 20px;
+  padding: $size--0_75 $size--1_25;
 }
-.button--blue {
-  background: #0b5fff;
-  color: #fff;
+.button--primary {
+  background: $color__action--default;
+  color: $color__primary--white;
   &:hover, &:focus {
-    background: #0053f0;
+    background: $color__action--default--hover;
   }
   &:active {
-    background: #004AD7;
+    background: $color__action--default--active;
   }
 }
-.button--white {
-  background: #fff;
-  color: #0b5fff;
+.button--Secondary {
+  background: $color__primary--white;
+  color: $color__action--default;
   &:hover, &:focus {
-    color: #0053f0;
+    color: $color__action--default--hover;
   }
   &:active {
-    color: #004AD7;
+    color: $color__action--default--active;
   }
 }
 .button--icon {
-  padding: 0.5em 2.25em 0.5em 1em;
+  padding: $size--0_5 2.25rem $size--0_5 $size--1;
   position: relative;
   svg {
     position: absolute;
-    right: 0.5em;
-    top: 0.5em;
+    right: $size--0_5;
+    top: $size--0_5;
   }
 }
 

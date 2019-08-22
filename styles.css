@@ -1,14 +1,28 @@
-/* ---------- TYPOGRAPHY --------- */
 /* ---------- COLORS --------- */
 /* --- primary --- */
 /* --- neutral --- */
 /* --- accent --- */
 /* --- aciton --- */
 /* --- function --- */
-/* ---------- SPACING --------- */
+/* ---------- SIZES --------- */
+/* ---------- TYPOGRAPHY --------- */
 /* ---------- BREAKPOINTS --------- */
 /* ---------- ELEVATIONS --------- */
 :root {
+  /* ---------- SIZES --------- */
+  --size--0_25: 0.25rem;
+  --size--0_5: 0.5rem;
+  --size--0_75: 0.75rem;
+  --size--1: 1rem;
+  --size--1_25: 1.25rem;
+  --size--1_5: 1.5rem;
+  --size--2: 2rem;
+  --size--2_5: 2.5rem;
+  --size--3: 3rem;
+  --size--3_5: 3.5rem;
+  --size--4: 4rem;
+  --size--5: 5rem;
+  --size--6: 6rem;
   /* ---------- TYPOGRAPHY --------- */
   --fontFamily__sans: $fontFamily__sans;
   --fontFamily__serif: $fontFamily__serif;
@@ -18,6 +32,7 @@
   --color__primary--brand-blue: #0b63ce;
   --color__primary--dark-blue: #134194;
   --color__primary--black: #09101d;
+  --color__primary--white: #FFFFFF;
   /* --- neutral --- */
   --color__neutral--1: #2c3a4b;
   --color__neutral--2: #394452;
@@ -60,19 +75,6 @@
   --color__function--info: #2e5aac;
   --color__function--info--border: #89a7e0;
   --color__function--info--background: #eef2fa;
-  /* ---------- SPACING --------- */
-  --spacing__0_25: 0.25em;
-  --spacing__0_5: 0.5em;
-  --spacing__0_75: 0.75em;
-  --spacing__1: 1em;
-  --spacing__1_5: 1.5em;
-  --spacing__2: 2em;
-  --spacing__2_5: 2.5em;
-  --spacing__3: 3em;
-  --spacing__3_5: 3.5em;
-  --spacing__4: 4em;
-  --spacing__5: 5em;
-  --spacing__6: 6em;
   /* ---------- BREAKPOINTS --------- */
   --breakpoint__forPhoneOnly: 599px;
   --breakpoint__forTabletPortraitUp: 600px;
@@ -91,83 +93,87 @@
   --elevation--9: 0px 7.4px 11.4px -7.59px rgba(0, 0, 0, 0.14), 0px 24px 36px 3.45px rgba(0, 0, 0, 0.078), 0px 9.2px 48px 8.6px rgba(0, 0, 0, 0.06);
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
   display: flex;
   justify-content: space-around;
-  padding: 2em;
-  font: 400 18px/28px "Source Sans Pro", Tahoma, "Trebuchet MS", sans-serif;
+  padding: 2rem;
+  font: 400 1.125rem/1.75rem "Source Sans Pro", Tahoma, "Trebuchet MS", sans-serif;
 }
 
 /* ---------- BUTTONS --------- */
 .button {
-  border-radius: 4px;
-  box-shadow: 0 0 0.75em 0 rgba(100, 116, 128, 0.16), 0 0.375em 1em -0.5em rgba(100, 116, 128, 0.8);
+  border-radius: 0.25rem;
+  box-shadow: 0px 1.1px 4.05px -0.66px rgba(0, 0, 0, 0.14), 0px 3px 4.5px 0.3px rgba(0, 0, 0, 0.036), 0px 2.9px 6px 0.2px rgba(0, 0, 0, 0.06);
   box-sizing: content-box;
   cursor: pointer;
   display: inline-block;
   font-weight: 600;
-  height: 24px;
-  line-height: 24px;
+  height: 1.5rem;
+  line-height: 1.5rem;
   text-align: center;
   text-decoration: none;
   transition: all 0.2s;
 }
 .button:hover {
-  box-shadow: 0 0 0.875em 0 rgba(100, 116, 128, 0.16), 0 0.5em 1.125em -0.5em rgba(100, 116, 128, 0.8);
+  box-shadow: 0px 2.6px 5.8px -2.31px rgba(0, 0, 0, 0.14), 0px 8px 12px 1.05px rgba(0, 0, 0, 0.046), 0px 4.4px 16px 2.2px rgba(0, 0, 0, 0.06);
   transform: translateY(calc(-3px + -1%));
 }
 .button:focus {
-  box-shadow: 0 0 0.875em 0 rgba(100, 116, 128, 0.16), 0 0.5em 1.125em -0.5em rgba(100, 116, 128, 0.8);
+  box-shadow: 0px 2.6px 5.8px -2.31px rgba(0, 0, 0, 0.14), 0px 8px 12px 1.05px rgba(0, 0, 0, 0.046), 0px 4.4px 16px 2.2px rgba(0, 0, 0, 0.06);
   transform: translateY(calc(-3px + -1%));
 }
 .button:active {
-  box-shadow: 0 0 0.75em 0 rgba(100, 116, 128, 0.16), 0 0.375em 1em -0.5em rgba(100, 116, 128, 0.8);
+  box-shadow: 0px 1.1px 4.05px -0.66px rgba(0, 0, 0, 0.14), 0px 3px 4.5px 0.3px rgba(0, 0, 0, 0.036), 0px 2.9px 6px 0.2px rgba(0, 0, 0, 0.06);
   transform: translateY(0);
 }
 
 .button--small {
-  padding: 4px 12px;
-  font-size: 16px;
+  padding: 0.25rem 0.75rem;
+  font-size: 1rem;
 }
 
 .button--medium {
-  padding: 8px 16px;
+  padding: 0.5rem 1rem;
 }
 
 .button--large {
-  padding: 12px 20px;
+  padding: 0.75rem 1.25rem;
 }
 
-.button--blue {
+.button--primary {
   background: #0b5fff;
-  color: #fff;
+  color: #FFFFFF;
 }
-.button--blue:hover, .button--blue:focus {
-  background: #0053f0;
+.button--primary:hover, .button--primary:focus {
+  background: #0053f1;
 }
-.button--blue:active {
-  background: #004AD7;
+.button--primary:active {
+  background: #004ad7;
 }
 
-.button--white {
-  background: #fff;
+.button--Secondary {
+  background: #FFFFFF;
   color: #0b5fff;
 }
-.button--white:hover, .button--white:focus {
-  color: #0053f0;
+.button--Secondary:hover, .button--Secondary:focus {
+  color: #0053f1;
 }
-.button--white:active {
-  color: #004AD7;
+.button--Secondary:active {
+  color: #004ad7;
 }
 
 .button--icon {
-  padding: 0.5em 2.25em 0.5em 1em;
+  padding: 0.5rem 2.25rem 0.5rem 1rem;
   position: relative;
 }
 .button--icon svg {
   position: absolute;
-  right: 0.5em;
-  top: 0.5em;
+  right: 0.5rem;
+  top: 0.5rem;
 }
 
 /* ---------- ELEVATIONS --------- */
