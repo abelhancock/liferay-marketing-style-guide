@@ -1,12 +1,8 @@
-:root {
+
   /* ---------- TYPOGRAPHY --------- */
   $fontFamily__sans: 'Source Sans Pro', Tahoma, 'Trebuchet MS', sans-serif;
   $fontFamily__serif: 'Source Serif Pro', Georgia, Cambria, 'Times New Roman', Times,serif;
   $fontFamily__mono: 'Source Code Pro', Menlo, monospace;
-  --fontFamily__sans: $fontFamily__sans;
-  --fontFamily__serif: $fontFamily__serif;
-  --fontFamily__mono: $fontFamily__mono;
-
 
   $font__paragraph: 400 18px/28px $fontFamily__sans;
   $font__heading--f1: 600 32px/36px $fontFamily__sans;
@@ -17,9 +13,6 @@
   $color__primary--brand-blue: #0b63ce;
   $color__primary--dark-blue: #134194;
   $color__primary--black: #09101d;
-  --color__primary--brand-blue: #{$color__primary--brand-blue};
-  --color__primary--dark-blue: #{$color__primary--dark-blue};
-  --color__primary--black: #{$color__primary--black};
 
   /* --- neutral --- */
   $color__neutral--1: #2c3a4b;
@@ -31,15 +24,6 @@
   $color__neutral--7: #dadee3;
   $color__neutral--8: #ebeef2;
   $color__neutral--9: #f4f6f9;
-  --color__neutral--1: #{$color__neutral--1};
-  --color__neutral--2: #{$color__neutral--2};
-  --color__neutral--3: #{$color__neutral--3};
-  --color__neutral--4: #{$color__neutral--4};
-  --color__neutral--5: #{$color__neutral--5};
-  --color__neutral--6: #{$color__neutral--6};
-  --color__neutral--7: #{$color__neutral--7};
-  --color__neutral--8: #{$color__neutral--8};
-  --color__neutral--9: #{$color__neutral--9};
 
   /* --- accent --- */
   $color__accent--0: #072252;
@@ -52,16 +36,6 @@
   $color__accent--7: #503690;
   $color__accent--8: #fdcc4a;
   $color__accent--9: #47c6f5;
-  --color__accent--0: #{$color__accent--0};
-  --color__accent--1: #{$color__accent--1};
-  --color__accent--2: #{$color__accent--2};
-  --color__accent--3: #{$color__accent--3};
-  --color__accent--4: #{$color__accent--4};
-  --color__accent--5: #{$color__accent--5};
-  --color__accent--6: #{$color__accent--6};
-  --color__accent--7: #{$color__accent--7};
-  --color__accent--8: #{$color__accent--8};
-  --color__accent--9: #{$color__accent--9};
 
   /* --- aciton --- */
   $color__action--default: #0b5fff;
@@ -71,13 +45,6 @@
   $color__action--secondary--hover: darken($color__action--secondary, 5%);
   $color__action--secondary--active: darken($color__action--secondary, 10%);
   $color__action--visited: #5e38ba;
-  --color__action--default: #{$color__action--default};
-  --color__action--default--hover: #{$color__action--default--hover};
-  --color__action--default--active: #{$color__action--default--active};
-  --color__action--secondary: #{$color__action--secondary};
-  --color__action--secondary--hover: #{$color__action--secondary--hover};
-  --color__action--secondary--active: #{$color__action--secondary--active};
-  --color__action--visited: #{$color__action--visited};
 
   /* --- function --- */
   $color__function--error: #da1414;
@@ -92,18 +59,6 @@
   $color__function--info: #2e5aac;
   $color__function--info--border: lighten($color__function--info, 28%);
   $color__function--info--background: lighten($color__function--info, 53%);
-  --color__function--error: #{$color__function--error};
-  --color__function--error--border: #{$color__function--error--border};
-  --color__function--error--background: #{$color__function--error--background};
-  --color__function--warning: #{$color__function--warning};
-  --color__function--warning--border: #{$color__function--warning--border};
-  --color__function--warning--background: #{$color__function--warning--background};
-  --color__function--success: #{$color__function--success};
-  --color__function--success--border: #{$color__function--success--border};
-  --color__function--success--background: #{$color__function--success--background};
-  --color__function--info: #{$color__function--info};
-  --color__function--info--border: #{$color__function--info--border};
-  --color__function--info--background: #{$color__function--info--background};
 
   /* ---------- SPACING --------- */
   $spacing__0_25: 0.25em;  
@@ -118,18 +73,6 @@
   $spacing__4: 4em;
   $spacing__5: 5em;
   $spacing__6: 6em;
-  --spacing__0_25: #{$spacing__0_25};
-  --spacing__0_5: #{$spacing__0_5};
-  --spacing__0_75: #{$spacing__0_75};
-  --spacing__1: #{$spacing__1};
-  --spacing__1_5: #{$spacing__1_5};
-  --spacing__2: #{$spacing__2};
-  --spacing__2_5: #{$spacing__2_5};
-  --spacing__3: #{$spacing__3};
-  --spacing__3_5: #{$spacing__3_5};
-  --spacing__4: #{$spacing__4};
-  --spacing__5: #{$spacing__5};
-  --spacing__6: #{$spacing__6};
 
   /* ---------- BREAKPOINTS --------- */
   $breakpoint__forPhoneOnly: 599px;
@@ -137,11 +80,6 @@
   $breakpoint__forTabletLandscapeUp: 900px;
   $breakpoint__forDesktopUp: 1200px;
   $breakpoint__forBigDesktopUp: 1800px;
-  --breakpoint__forPhoneOnly: #{$breakpoint__forPhoneOnly};
-  --breakpoint__forTabletPortraitUp: #{$breakpoint__forTabletPortraitUp};
-  --breakpoint__forTabletLandscapeUp: #{$breakpoint__forTabletLandscapeUp};
-  --breakpoint__forDesktopUp: #{$breakpoint__forDesktopUp};
-  --breakpoint__forBigDesktopUp: #{$breakpoint__forBigDesktopUp};
 
   @mixin forPhoneOnly {
     @media (max-width: $breakpoint__forPhoneOnly) {
@@ -215,6 +153,90 @@
   $elevation--7: elevation(map-get($elevationMap, 7));
   $elevation--8: elevation(map-get($elevationMap, 8));
   $elevation--9: elevation(map-get($elevationMap, 9));
+
+:root {
+  /* ---------- TYPOGRAPHY --------- */
+
+  --fontFamily__sans: $fontFamily__sans;
+  --fontFamily__serif: $fontFamily__serif;
+  --fontFamily__mono: $fontFamily__mono;
+
+  /* ---------- COLORS --------- */
+
+  /* --- primary --- */
+  --color__primary--brand-blue: #{$color__primary--brand-blue};
+  --color__primary--dark-blue: #{$color__primary--dark-blue};
+  --color__primary--black: #{$color__primary--black};
+
+  /* --- neutral --- */
+  --color__neutral--1: #{$color__neutral--1};
+  --color__neutral--2: #{$color__neutral--2};
+  --color__neutral--3: #{$color__neutral--3};
+  --color__neutral--4: #{$color__neutral--4};
+  --color__neutral--5: #{$color__neutral--5};
+  --color__neutral--6: #{$color__neutral--6};
+  --color__neutral--7: #{$color__neutral--7};
+  --color__neutral--8: #{$color__neutral--8};
+  --color__neutral--9: #{$color__neutral--9};
+
+  /* --- accent --- */
+  --color__accent--0: #{$color__accent--0};
+  --color__accent--1: #{$color__accent--1};
+  --color__accent--2: #{$color__accent--2};
+  --color__accent--3: #{$color__accent--3};
+  --color__accent--4: #{$color__accent--4};
+  --color__accent--5: #{$color__accent--5};
+  --color__accent--6: #{$color__accent--6};
+  --color__accent--7: #{$color__accent--7};
+  --color__accent--8: #{$color__accent--8};
+  --color__accent--9: #{$color__accent--9};
+
+  /* --- aciton --- */
+  --color__action--default: #{$color__action--default};
+  --color__action--default--hover: #{$color__action--default--hover};
+  --color__action--default--active: #{$color__action--default--active};
+  --color__action--secondary: #{$color__action--secondary};
+  --color__action--secondary--hover: #{$color__action--secondary--hover};
+  --color__action--secondary--active: #{$color__action--secondary--active};
+  --color__action--visited: #{$color__action--visited};
+
+  /* --- function --- */
+  --color__function--error: #{$color__function--error};
+  --color__function--error--border: #{$color__function--error--border};
+  --color__function--error--background: #{$color__function--error--background};
+  --color__function--warning: #{$color__function--warning};
+  --color__function--warning--border: #{$color__function--warning--border};
+  --color__function--warning--background: #{$color__function--warning--background};
+  --color__function--success: #{$color__function--success};
+  --color__function--success--border: #{$color__function--success--border};
+  --color__function--success--background: #{$color__function--success--background};
+  --color__function--info: #{$color__function--info};
+  --color__function--info--border: #{$color__function--info--border};
+  --color__function--info--background: #{$color__function--info--background};
+
+  /* ---------- SPACING --------- */
+  --spacing__0_25: #{$spacing__0_25};
+  --spacing__0_5: #{$spacing__0_5};
+  --spacing__0_75: #{$spacing__0_75};
+  --spacing__1: #{$spacing__1};
+  --spacing__1_5: #{$spacing__1_5};
+  --spacing__2: #{$spacing__2};
+  --spacing__2_5: #{$spacing__2_5};
+  --spacing__3: #{$spacing__3};
+  --spacing__3_5: #{$spacing__3_5};
+  --spacing__4: #{$spacing__4};
+  --spacing__5: #{$spacing__5};
+  --spacing__6: #{$spacing__6};
+
+  /* ---------- BREAKPOINTS --------- */
+  --breakpoint__forPhoneOnly: #{$breakpoint__forPhoneOnly};
+  --breakpoint__forTabletPortraitUp: #{$breakpoint__forTabletPortraitUp};
+  --breakpoint__forTabletLandscapeUp: #{$breakpoint__forTabletLandscapeUp};
+  --breakpoint__forDesktopUp: #{$breakpoint__forDesktopUp};
+  --breakpoint__forBigDesktopUp: #{$breakpoint__forBigDesktopUp};
+
+  /* ---------- ELEVATIONS --------- */
+
   --elevation--1: #{$elevation--1};
   --elevation--2: #{$elevation--2};
   --elevation--3: #{$elevation--3};
