@@ -155,14 +155,14 @@ body {
   background: #004ad7;
 }
 
-.button--Secondary {
+.button--secondary {
   background: #FFFFFF;
   color: #0b5fff;
 }
-.button--Secondary:hover, .button--Secondary:focus {
+.button--secondary:hover, .button--secondary:focus {
   color: #0053f1;
 }
-.button--Secondary:active {
+.button--secondary:active {
   color: #004ad7;
 }
 
