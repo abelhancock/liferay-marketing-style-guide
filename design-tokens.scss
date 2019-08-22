@@ -105,41 +105,31 @@
   --color__function--info--border: #{$color__function--info--border};
   --color__function--info--background: #{$color__function--info--background};
 
-  /* ---------- ELEVATIONS --------- */
-  $intensityMap: (
-    "lighter": 0.25,
-    "light": 0.5,
-    "default": 1,
-    "dark": 2,
-    "darker": 4
-  );
-
-  @mixin elevation($n, $intensity: default) {
-    box-shadow: 0px ($n - 1) * 0.3 + 0.5px $n * 0.35 + 3px ($n - 1) * -0.33px
-        rgba(0, 0, 0, 0.14 * map-get($intensityMap, $intensity)),
-      0px $n * 1px $n * 1.5px ($n - 1) * 0.15px
-        rgba(0, 0, 0, 0.03 + ($n * 0.002 * map-get($intensityMap, $intensity))),
-      0px $n * 0.3 + 2px $n * 2px $n * 0.4 - 1px
-        rgba(0, 0, 0, 0.06 * map-get($intensityMap, $intensity));
-  }
-
-  $elevationMap: (
-    1: 1,
-    2: 2,
-    3: 3,
-    4: 4,
-    5: 6,
-    6: 8,
-    7: 11,
-    8: 15,
-    9: 24
-  );
-
-  @for $i from 1 through 9 {
-    .elevation--#{$i} {
-      @include elevation(map-get($elevationMap, $i));
-    }
-  }
+  /* ---------- SPACING --------- */
+  $spacing__0_25: 0.25em;  
+  $spacing__0_5: 0.5em;
+  $spacing__0_75: 0.75em;
+  $spacing__1: 1em;
+  $spacing__1_5: 1.5em;
+  $spacing__2: 2em;
+  $spacing__2_5: 2.5em;
+  $spacing__3: 3em;
+  $spacing__3_5: 3.5em;
+  $spacing__4: 4em;
+  $spacing__5: 5em;
+  $spacing__6: 6em;
+  --spacing__0_25: #{$spacing__0_25};
+  --spacing__0_5: #{$spacing__0_5};
+  --spacing__0_75: #{$spacing__0_75};
+  --spacing__1: #{$spacing__1};
+  --spacing__1_5: #{$spacing__1_5};
+  --spacing__2: #{$spacing__2};
+  --spacing__2_5: #{$spacing__2_5};
+  --spacing__3: #{$spacing__3};
+  --spacing__3_5: #{$spacing__3_5};
+  --spacing__4: #{$spacing__4};
+  --spacing__5: #{$spacing__5};
+  --spacing__6: #{$spacing__6};
 
   /* ---------- BREAKPOINTS --------- */
   $breakpoint__forPhoneOnly: 599px;
@@ -193,4 +183,45 @@
       @content;
     }
   }
+
+  /* ---------- ELEVATIONS --------- */
+  @function elevation($n) {
+    @return 0px ($n - 1) * 0.3 + 0.5px $n * 0.35 + 3px ($n - 1) * -0.33px
+        rgba(0, 0, 0, 0.14),
+      0px $n * 1px $n * 1.5px ($n - 1) * 0.15px
+        rgba(0, 0, 0, 0.03 + ($n * 0.002)),
+      0px $n * 0.3 + 2px $n * 2px $n * 0.4 - 1px
+        rgba(0, 0, 0, 0.06);
+  }
+
+  $elevationMap: (
+    1: 1,
+    2: 2,
+    3: 3,
+    4: 4,
+    5: 6,
+    6: 8,
+    7: 11,
+    8: 15,
+    9: 24
+  );
+
+  $elevation--1: elevation(map-get($elevationMap, 1));
+  $elevation--2: elevation(map-get($elevationMap, 2));
+  $elevation--3: elevation(map-get($elevationMap, 3));
+  $elevation--4: elevation(map-get($elevationMap, 4));
+  $elevation--5: elevation(map-get($elevationMap, 5));
+  $elevation--6: elevation(map-get($elevationMap, 6));
+  $elevation--7: elevation(map-get($elevationMap, 7));
+  $elevation--8: elevation(map-get($elevationMap, 8));
+  $elevation--9: elevation(map-get($elevationMap, 9));
+  --elevation--1: #{$elevation--1};
+  --elevation--2: #{$elevation--2};
+  --elevation--3: #{$elevation--3};
+  --elevation--4: #{$elevation--4};
+  --elevation--5: #{$elevation--5};
+  --elevation--6: #{$elevation--6};
+  --elevation--7: #{$elevation--7};
+  --elevation--8: #{$elevation--8};
+  --elevation--9: #{$elevation--9};
 }
