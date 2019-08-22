@@ -5,7 +5,7 @@
 /* --- accent --- */
 /* --- aciton --- */
 /* --- function --- */
-/* ---------- SPACING --------- */
+/* ---------- SIZES --------- */
 /* ---------- BREAKPOINTS --------- */
 /* ---------- ELEVATIONS --------- */
 :root {
@@ -60,19 +60,19 @@
   --color__function--info: #2e5aac;
   --color__function--info--border: #89a7e0;
   --color__function--info--background: #eef2fa;
-  /* ---------- SPACING --------- */
-  --spacing__0_25: 0.25em;
-  --spacing__0_5: 0.5em;
-  --spacing__0_75: 0.75em;
-  --spacing__1: 1em;
-  --spacing__1_5: 1.5em;
-  --spacing__2: 2em;
-  --spacing__2_5: 2.5em;
-  --spacing__3: 3em;
-  --spacing__3_5: 3.5em;
-  --spacing__4: 4em;
-  --spacing__5: 5em;
-  --spacing__6: 6em;
+  /* ---------- SIZES --------- */
+  --size--0_25: 0.25em;
+  --size--0_5: 0.5em;
+  --size--0_75: 0.75em;
+  --size--1: 1em;
+  --size--1_5: 1.5em;
+  --size--2: 2em;
+  --size--2_5: 2.5em;
+  --size--3: 3em;
+  --size--3_5: 3.5em;
+  --size--4: 4em;
+  --size--5: 5em;
+  --size--6: 6em;
   /* ---------- BREAKPOINTS --------- */
   --breakpoint__forPhoneOnly: 599px;
   --breakpoint__forTabletPortraitUp: 600px;

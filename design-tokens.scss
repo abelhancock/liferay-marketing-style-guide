@@ -60,19 +60,19 @@
   $color__function--info--border: lighten($color__function--info, 28%);
   $color__function--info--background: lighten($color__function--info, 53%);
 
-  /* ---------- SPACING --------- */
-  $spacing__0_25: 0.25em;  
-  $spacing__0_5: 0.5em;
-  $spacing__0_75: 0.75em;
-  $spacing__1: 1em;
-  $spacing__1_5: 1.5em;
-  $spacing__2: 2em;
-  $spacing__2_5: 2.5em;
-  $spacing__3: 3em;
-  $spacing__3_5: 3.5em;
-  $spacing__4: 4em;
-  $spacing__5: 5em;
-  $spacing__6: 6em;
+  /* ---------- SIZES --------- */
+  $size--0_25: 0.25em;  
+  $size--0_5: 0.5em;
+  $size--0_75: 0.75em;
+  $size--1: 1em;
+  $size--1_5: 1.5em;
+  $size--2: 2em;
+  $size--2_5: 2.5em;
+  $size--3: 3em;
+  $size--3_5: 3.5em;
+  $size--4: 4em;
+  $size--5: 5em;
+  $size--6: 6em;
 
   /* ---------- BREAKPOINTS --------- */
   $breakpoint__forPhoneOnly: 599px;
@@ -214,19 +214,19 @@
   --color__function--info--border: #{$color__function--info--border};
   --color__function--info--background: #{$color__function--info--background};
 
-  /* ---------- SPACING --------- */
-  --spacing__0_25: #{$spacing__0_25};
-  --spacing__0_5: #{$spacing__0_5};
-  --spacing__0_75: #{$spacing__0_75};
-  --spacing__1: #{$spacing__1};
-  --spacing__1_5: #{$spacing__1_5};
-  --spacing__2: #{$spacing__2};
-  --spacing__2_5: #{$spacing__2_5};
-  --spacing__3: #{$spacing__3};
-  --spacing__3_5: #{$spacing__3_5};
-  --spacing__4: #{$spacing__4};
-  --spacing__5: #{$spacing__5};
-  --spacing__6: #{$spacing__6};
+  /* ---------- SIZES --------- */
+  --size--0_25: #{$size--0_25};
+  --size--0_5: #{$size--0_5};
+  --size--0_75: #{$size--0_75};
+  --size--1: #{$size--1};
+  --size--1_5: #{$size--1_5};
+  --size--2: #{$size--2};
+  --size--2_5: #{$size--2_5};
+  --size--3: #{$size--3};
+  --size--3_5: #{$size--3_5};
+  --size--4: #{$size--4};
+  --size--5: #{$size--5};
+  --size--6: #{$size--6};
 
   /* ---------- BREAKPOINTS --------- */
   --breakpoint__forPhoneOnly: #{$breakpoint__forPhoneOnly};
