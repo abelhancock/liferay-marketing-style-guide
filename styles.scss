@@ -7,7 +7,7 @@ body {
 	display: flex;
 	justify-content: space-around;
 	padding: $size--2;
-	font: $font__paragraph;
+	font: $font__paragraph--base;
 }
 
 /* ---------- BUTTONS --------- */
@@ -39,13 +39,15 @@ body {
 
 .button--small {
   padding: $size--0_25 $size--0_75;
-  font-size: $fontSize__paragraph--small;
+  font-size: $fontSize__paragraph--xsmall;
 }
 .button--medium {
   padding: $size--0_5 $size--1;
+  font-size: $fontSize__paragraph--small;
 }
 .button--large {
   padding: $size--0_75 $size--1_25;
+  font-size: $fontSize__paragraph--base;
 }
 .button--primary {
   background: $color__action--default;

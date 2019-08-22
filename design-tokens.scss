@@ -73,11 +73,13 @@ $fontFamily__serif: "Source Serif Pro", Georgia, Cambria, "Times New Roman",
   Times, serif;
 $fontFamily__mono: "Source Code Pro", Menlo, monospace;
 
-$font__paragraph: 400 1.125rem/1.75rem $fontFamily__sans;
+$font__paragraph--base: 400 1.125rem/1.75rem $fontFamily__sans;
 $font__paragraph--small: 400 1rem/1.5rem $fontFamily__sans;
 $font__heading--f1: 600 2rem/2.25rem $fontFamily__sans;
 
+$fontSize__paragraph--base: $size--1_25;
 $fontSize__paragraph--small: $size--1;
+$fontSize__paragraph--xsmall: $size--0_75;
 
 /* ---------- BREAKPOINTS --------- */
 $breakpoint__forPhoneOnly: 599px;
