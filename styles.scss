@@ -69,6 +69,16 @@ body {
     color: $color__action--default--active;
   }
 }
+.button--alternate {
+  background: $color__action--secondary;
+  color: $color__primary--white;
+  &:hover, &:focus {
+    color: $color__action--secondary--hover;
+  }
+  &:active {
+    color: $color__action--secondary--active;
+  }
+}
 .button--icon {
   padding: $size--0_5 2.25rem $size--0_5 $size--1;
   position: relative;

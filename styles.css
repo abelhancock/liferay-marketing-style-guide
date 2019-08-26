@@ -168,6 +168,17 @@ body {
   color: #004ad7;
 }
 
+.button--alternate {
+  background: #19ab4f;
+  color: #FFFFFF;
+}
+.button--alternate:hover, .button--alternate:focus {
+  color: #169545;
+}
+.button--alternate:active {
+  color: #127f3a;
+}
+
 .button--icon {
   padding: 0.5rem 2.25rem 0.5rem 1rem;
   position: relative;
